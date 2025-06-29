@@ -71,9 +71,7 @@ fun main() {
         Product(name = "Keyboard", price = 499.0, category = "Electronics"), // ราคาไม่เกิน 500
         Product(name = "Jeans", price = 1200.0, category = "Apparel"),
         Product(name = "Headphones", price = 1800.0, category = "Electronics"), // ตรงตามเงื่อนไข
-        Product(name = "Mouse", price = 299.0, category = "Electronics"), // สินค้าราคาไม่เกิน 1,000
-        Product(name = "Desk Chair", price = 5500.0, category = "Furniture"), // สินค้าระหว่าง 1,000 - 9,999
-        Product(name = "Gaming PC", price = 60000.0, category = "Electronics") // สินค้าราคา 10,000 ขึ้นไป
+
     )
 
     println("รายการสินค้าทั้งหมด:")
