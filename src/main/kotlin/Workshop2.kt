@@ -134,5 +134,39 @@ fun main() {
         println("--- กลุ่ม: $range ---")
         productList.forEach { println(it) }
         println() // เพิ่มบรรทัดว่างเพื่อให้อ่านง่ายขึ้น
+
     }
 }
+// ฟังก์ชันคำนวณผลรวมราคาสินค้า Electronics ที่ราคา > 500 บาท
+fun calculateTotalElectronicsPriceOver500(products: List<Product>): Double {
+    return products
+        .filter { it.category == "Electronics" && it.price > 500.0 }
+        .sumOf { it.price }
+}
+
+// ฟังก์ชันนับจำนวนสินค้าที่เป็น Electronics และราคา > 500 บาท
+fun countElectronicsOver500(products: List<Product>): Int {
+    return products.count { it.category == "Electronics" && it.price > 500.0 }
+}
+
+
+
+
+
+
+
+
+
+
+//fun calculateTotalPriceOver500(products: List<Product>): Double {
+//    return products
+//        .filter { it.category == "Electronics" } // กรองเฉพาะสินค้าในหมวด "Electronics"
+//        .filter { it.price > 500.0 }        // กรองเฉพาะสินค้าที่มีราคาสูงกว่า 500 บาท
+//        .sumOf { it.price }
+//}
+//
+//fun countElectronicsOver500(products: List<Product>): Int {
+//    val filtered = products.filter { it.category == "Electronics" && it.price > 500 }
+//    println("รายการสินค้าที่ตรงเงื่อนไข: ${filtered.map { it.name }}")
+//    return filtered.size
+//}
